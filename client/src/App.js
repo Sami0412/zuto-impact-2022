@@ -1,6 +1,14 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import logo from "./zuto-logo.svg";
 import "./App.css";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import Container from '@mui/material/Container';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 class App extends Component {
     constructor(props) {
@@ -21,12 +29,21 @@ class App extends Component {
 
     render() {
         return (
+            
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
+                    <h1 className="App-title">Welcome to Impact 2022</h1>
                 </header>
-                <p className="App-intro">{this.state.apiResponse}</p>
+                <Container className="inputContainer" maxWidth="sm">
+                    <body>
+                        <p>What would you like to know?</p>
+                        <TextField className="inputBox" fullWidth label="Type your question here" id="fullWidth" />
+                        <Button className="inputButton" variant="contained">Submit Question</Button>
+                    </body>
+                </Container>
+                
+                <p className="App-intro">{this.state.apiResponse}hahaudhuq</p>
             </div>
         );
     }
